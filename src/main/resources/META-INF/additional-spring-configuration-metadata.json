@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "protutoro.jwt.chave",
+    "type": "java.lang.String",
+    "description": "A description for 'protutoro.jwt.chave'"
+  },
+  {
+    "name": "protutoro.jwt.expiracao",
+    "type": "java.lang.String",
+    "description": "A description for 'protutoro.jwt.expiracao'"
+  },
+  {
+    "name": "protutoro.jwt.expiracao",
+    "type": "java.lang.String",
+    "description": "A description for 'protutoro.jwt.expiracao'"
+  },
+  {
+    "name": "protutoro.jwt.chave",
+    "type": "java.lang.String",
+    "description": "A description for 'protutoro.jwt.chave'"
+  },
+  {
+    "name": "protutoro.jwt.expiracao",
+    "type": "java.lang.String",
+    "description": "A description for 'protutoro.jwt.expiracao'"
+  },
+  {
+    "name": "protutoro.jwt.expiracao",
+    "type": "java.lang.String",
+    "description": "A description for 'protutoro.jwt.expiracao'"
+  }
+]}

@@ -1,1 +1,18 @@
+server:
+ servlet:
+    context-path: /protutoro/api
+    
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: ${MONGO_DB_URI:mongodb+srv://vastiane:<niT3gPpYgwWFTScm>@cluster0.jh5wppb.mongodb.net/vastiane.protutoro?retryWrites=true&w=majority}
+      auto-index-creation: true      
+
+springdoc:
+  swagger-ui:
+    path: /public/swagger
+
+
+ 
 
