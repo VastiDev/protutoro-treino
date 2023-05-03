@@ -2,10 +2,13 @@ package dev.wakandaacademy.protutoro.tarefa.domain;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import dev.wakandaacademy.protutoro.tarefa.application.api.TarefaRequest;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,17 +21,32 @@ import lombok.NoArgsConstructor;
 @Document(collection = "Tarefa")
 @Getter
 public class Tarefa {
+
 	@Id
 	private UUID idTarefa;
-	private String nome;
+	@NotBlank
 	private String descricao;
 	@Indexed
 	private UUID idUsuario;
 	@Indexed
 	private UUID idArea;
 	@Indexed
-	private UUID idProjeto;
-	@Builder.Default
-	private StatusTarefa status = StatusTarefa.A_FAZER;
+	private UUID idProjeto; 
+	private StatusTarefa status;
+	private StatusAtivacaoTarefa statusAtivacao;
+	private int contagemPomodoro;
+	
 
+	
+	public Tarefa(TarefaRequest tarefaRequest) {
+		this.idTarefa = UUID.randomUUID();
+		this.idUsuario = tarefaRequest.getIdUsuario();
+		this.descricao = tarefaRequest.getDescricao();
+		this.idArea = tarefaRequest.getIdArea();
+		this.idProjeto = tarefaRequest.getIdProjeto();
+		this.status = StatusTarefa.A_FAZER;
+		this.statusAtivacao = StatusAtivacaoTarefa.INATIVA;
+		this.contagemPomodoro = 1;
+
+	}
 }

@@ -6,7 +6,7 @@ spring:
   data:
     mongodb:
       authentication-database: admin
-      uri: ${MONGO_DB_URI:mongodb+srv://vastiane:<niT3gPpYgwWFTScm>@cluster0.jh5wppb.mongodb.net/vastiane.protutoro?retryWrites=true&w=majority}
+      uri: ${MONGO_DB_URI:mongodb+srv://vastiane:2l4GOUjmN49s9dsR@cluster0.jh5wppb.mongodb.net/alex?retryWrites=true&w=majority}
       auto-index-creation: true      
 
 springdoc:
